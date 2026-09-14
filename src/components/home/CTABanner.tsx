@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/shared/Container";
 import { whatsappLink } from "@/lib/whatsapp";
 import { company } from "@/data/company";
@@ -6,8 +7,15 @@ import { company } from "@/data/company";
 export default function CTABanner() {
   return (
     <section className="relative overflow-hidden bg-brand-rust py-16 sm:py-20">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-orange/25 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-brand-blue/20 blur-3xl" />
+      <Image
+        src="/images/hero/section-cta-banner.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center pointer-events-none select-none"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-rust/95 via-brand-rust/70 to-brand-rust/40" />
+
       <Container className="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
         <div className="max-w-xl">
           <h2 className="text-balance font-engineering text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">

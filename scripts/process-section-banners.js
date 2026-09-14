@@ -9,7 +9,10 @@ const fs = require("fs");
 const SRC_DIR = path.join(__dirname, "assets-src", "section-banners");
 const OUT_DIR = path.join(__dirname, "..", "public", "images", "hero");
 
-const FILES = [["calculators-teaser.jpeg", "section-calculators-teaser.jpg"]];
+const FILES = [
+  ["calculators-teaser.jpeg", "section-calculators-teaser.jpg"],
+  ["cta-banner.jpeg", "section-cta-banner.jpg"],
+];
 
 async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
