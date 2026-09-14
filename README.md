@@ -77,6 +77,16 @@ photo of the same role. Video compression was run manually via `ffmpeg`; see the
 history for the exact command if new videos need compressing (target: H.264, ~854px wide,
 CRF 30, AAC audio).
 
+The homepage hero slideshow (`public/images/hero/*.jpg`) is a special case: the client's
+source photos are square or portrait, not landscape, so a plain crop would cut off the
+vehicle. `scripts/extend-hero-landscape.js` builds a wide 4K (3840×1600) canvas for each
+one instead — a blurred, darkened copy of the same photo (same framing, just scaled up)
+fills the full canvas, with the sharp original composited on top, centred, at a size that
+leaves a safety margin on every side. The browser then just does a plain
+`object-fit: cover`, so the frame is always filled edge to edge and the vehicle is never
+cropped at any realistic viewport, from phone to ultra-wide desktop. Re-run this script if
+the source photos in `scripts/assets-src/hero/` change.
+
 Run `npm run check-assets` (a small Python script) at any time to flag any image or video
 in `public/` that's grown past a sensible size for a fast-loading page.
 
