@@ -1,56 +1,55 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import ShuffleBackdrop from "@/components/shared/ShuffleBackdrop";
+import StatCounter from "@/components/shared/StatCounter";
 import { heroSlides } from "@/data/hero";
 import { company } from "@/data/company";
-import { whatsappLink } from "@/lib/whatsapp";
 
 export default function Hero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeSlide = heroSlides[activeIndex];
+
   return (
-    <section className="relative flex min-h-[640px] items-center overflow-hidden sm:min-h-[720px]">
-      <ShuffleBackdrop slides={heroSlides} intervalMs={4500} />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/25" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/10" />
+    <section>
+      <div className="relative aspect-[1.9/1] w-full overflow-hidden sm:aspect-[2.2/1] lg:aspect-[2.6/1]">
+        <ShuffleBackdrop
+          slides={heroSlides}
+          intervalMs={60000}
+          preloadAll
+          onActiveChange={setActiveIndex}
+        />
+        <h1 className="sr-only">
+          Masterpoint Resources Ltd: Structural Excellence for Your Next Landmark Project
+        </h1>
+      </div>
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
-          <span className="inline-block rounded-full border border-brand-orange/60 bg-black/30 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-orange backdrop-blur-sm sm:text-sm">
-            Nationwide Construction &amp; Building Materials
-          </span>
-
-          <h1 className="mt-6 text-balance font-heading text-4xl font-bold uppercase leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-            Structural Excellence for Your Next{" "}
-            <span className="text-brand-orange">Landmark Project</span>
-          </h1>
-
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-            Property developers, structural engineers, homeowners and corporate estate firms trust
-            Masterpoint for uncompromising quality and precision building solutions, backed by{" "}
-            {company.yearsExperience} years of combined experience, nationwide. Direct-source
-            materials, certified site supervision, and a firm quote before you spend a single naira.
-          </p>
-
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link
-              href="/materials"
-              className="rounded-md bg-brand-orange px-7 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-brand-orange/30 transition-transform hover:scale-[1.03] hover:bg-brand-orange-dark sm:text-base"
-            >
-              Order Materials Online
-            </Link>
-            <a
-              href={whatsappLink("Hello Masterpoint, I would like to make an enquiry about a project.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border-2 border-brand-blue bg-black/20 px-7 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-colors hover:bg-brand-blue sm:text-base"
-            >
-              Chat on WhatsApp
-            </a>
-            <a
-              href={`tel:${company.phones[0].tel}`}
-              className="flex items-center justify-center gap-2 px-2 py-3.5 text-sm font-bold uppercase tracking-wide text-white underline decoration-brand-orange decoration-2 underline-offset-4 sm:text-base"
-            >
-              Call Us Now
-            </a>
-          </div>
+      {/* The stat bar's backdrop follows whichever hero picture is showing, and
+          the counters replay each time it changes, so the two stay in step. */}
+      <div className="relative overflow-hidden bg-brand-dark">
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            key={activeSlide.image}
+            src={activeSlide.image}
+            alt=""
+            fill
+            quality={60}
+            sizes="100vw"
+            className="animate-[fade-in_1.4s_ease-in-out] object-cover object-center blur-2xl brightness-[0.35] saturate-150"
+          />
+        </div>
+        <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 lg:grid-cols-4 lg:px-8">
+          {company.stats.map((stat) => (
+            <div key={stat.label} className="text-center lg:border-l lg:border-white/10 lg:first:border-l-0">
+              <p className="font-heading text-3xl font-bold text-brand-orange sm:text-4xl">
+                <StatCounter key={`${stat.label}-${activeIndex}`} value={stat.value} suffix={stat.suffix} />
+              </p>
+              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-white/70 sm:text-sm">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -9,11 +9,17 @@ type Slide = { image: string; alt: string };
 export default function ShuffleBackdrop({
   slides,
   intervalMs = 4500,
-  priorityFirst = true,
+  preloadAll = false,
+  onActiveChange,
 }: {
   slides: Slide[];
   intervalMs?: number;
-  priorityFirst?: boolean;
+  /** Eagerly load every slide up front instead of just the first. Only sensible
+   * for a small slide count (a handful of hero banners), not a big gallery. */
+  preloadAll?: boolean;
+  /** Fired with the active slide's index whenever it changes (including the
+   * very first client-side shuffle), so a parent can sync other UI to it. */
+  onActiveChange?: (index: number) => void;
 }) {
   // Start deterministic (unshuffled, first slide active) so server and client
   // markup match on first paint, the shuffle itself only ever runs client-side.
@@ -25,6 +31,7 @@ export default function ShuffleBackdrop({
     if (slides.length <= 1) return;
     order.current = reshuffle(slides);
     cursor.current = 0;
+    onActiveChange?.(slides.indexOf(order.current[0]));
     const id = setInterval(() => {
       cursor.current += 1;
       if (cursor.current >= order.current.length) {
@@ -32,9 +39,12 @@ export default function ShuffleBackdrop({
         order.current = reshuffle(slides, last);
         cursor.current = 0;
       }
-      setActive(order.current[cursor.current]);
+      const next = order.current[cursor.current];
+      setActive(next);
+      onActiveChange?.(slides.indexOf(next));
     }, intervalMs);
     return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slides, intervalMs]);
 
   return (
@@ -50,7 +60,7 @@ export default function ShuffleBackdrop({
             src={slide.image}
             alt={slide.alt}
             fill
-            priority={priorityFirst && slide.image === slides[0].image}
+            priority={preloadAll || slide.image === slides[0].image}
             quality={90}
             sizes="100vw"
             className="object-cover object-center pointer-events-none select-none"

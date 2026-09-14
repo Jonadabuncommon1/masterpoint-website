@@ -77,15 +77,16 @@ photo of the same role. Video compression was run manually via `ffmpeg`; see the
 history for the exact command if new videos need compressing (target: H.264, ~854px wide,
 CRF 30, AAC audio).
 
-The homepage hero slideshow (`public/images/hero/*.jpg`) is a special case: the client's
-source photos are square or portrait, not landscape, so a plain crop would cut off the
-vehicle. `scripts/extend-hero-landscape.js` builds a wide 4K (3840×1600) canvas for each
-one instead — a blurred, darkened copy of the same photo (same framing, just scaled up)
-fills the full canvas, with the sharp original composited on top, centred, at a size that
-leaves a safety margin on every side. The browser then just does a plain
-`object-fit: cover`, so the frame is always filled edge to edge and the vehicle is never
-cropped at any realistic viewport, from phone to ultra-wide desktop. Re-run this script if
-the source photos in `scripts/assets-src/hero/` change.
+The homepage hero (`public/images/hero/hero-banner-*.jpg`) is a rotating slideshow of four
+complete, pre-designed banner graphics (headline, copy, phone number and a "Get a Quote"
+button are all part of the artwork itself) rather than plain photos with text overlaid in
+code. `scripts/process-hero-banners.js` just resizes/compresses them, never crops them,
+since cropping could cut off text or a button near the edge. `src/data/hero.ts` lists the
+four slides; `src/components/home/Hero.tsx` shuffles between them (`ShuffleBackdrop`,
+currently a 1-minute interval) and also drives the stat bar directly beneath it, whose
+backdrop and counters change alongside whichever banner is showing. To swap in different
+banner artwork, drop the new files in `scripts/assets-src/hero-banners/`, update the
+filenames in `process-hero-banners.js`, and re-run it.
 
 Run `npm run check-assets` (a small Python script) at any time to flag any image or video
 in `public/` that's grown past a sensible size for a fast-loading page.
