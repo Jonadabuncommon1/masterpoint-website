@@ -13,15 +13,17 @@ export default function Hero() {
 
   return (
     <section>
-      {/* The banners are all a fixed 1600x533 (3:1) canvas, so locking the
-          container to that exact ratio means object-cover never has to crop
-          anything - the whole picture is always visible, top to bottom. */}
-      <div className="relative aspect-[3/1] w-full overflow-hidden">
+      {/* The banners are all a fixed 1600x533 (3:1) canvas. On phones that
+          ratio reads as too short, so it's boosted to 4:3 below the sm
+          breakpoint (cropping the sides a little via object-cover) and locked
+          back to the native 3:1 - no cropping - from sm upward. */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden sm:aspect-[3/1]">
         <ShuffleBackdrop
           slides={heroSlides}
           intervalMs={6000}
           preloadAll
           onActiveChange={setActiveIndex}
+          objectPosition="30% center"
         />
         <h1 className="sr-only">
           Masterpoint Resources Ltd: Structural Excellence for Your Next Landmark Project
@@ -42,13 +44,13 @@ export default function Hero() {
             className="animate-[fade-in_1.4s_ease-in-out] object-cover object-center blur-2xl brightness-[0.35] saturate-150"
           />
         </div>
-        <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-6 sm:gap-6 sm:px-6 sm:py-10 lg:grid-cols-4 lg:px-8">
           {company.stats.map((stat) => (
             <div key={stat.label} className="text-center lg:border-l lg:border-white/10 lg:first:border-l-0">
-              <p className="font-heading text-3xl font-bold text-brand-orange sm:text-4xl">
+              <p className="font-heading text-2xl font-bold text-brand-orange sm:text-4xl">
                 <StatCounter key={`${stat.label}-${activeIndex}`} value={stat.value} suffix={stat.suffix} />
               </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-white/70 sm:text-sm">
+              <p className="mt-1 text-[11px] font-medium uppercase tracking-wide text-white/70 sm:text-sm">
                 {stat.label}
               </p>
             </div>

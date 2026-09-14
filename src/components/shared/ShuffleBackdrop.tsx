@@ -11,6 +11,7 @@ export default function ShuffleBackdrop({
   intervalMs = 4500,
   preloadAll = false,
   onActiveChange,
+  objectPosition = "center",
 }: {
   slides: Slide[];
   intervalMs?: number;
@@ -20,6 +21,10 @@ export default function ShuffleBackdrop({
   /** Fired with the active slide's index whenever it changes (including the
    * very first client-side shuffle), so a parent can sync other UI to it. */
   onActiveChange?: (index: number) => void;
+  /** CSS object-position for the image. Only matters when the container's
+   * aspect ratio doesn't match the source image (object-cover then has
+   * something to crop) - harmless otherwise. */
+  objectPosition?: string;
 }) {
   // Start deterministic (unshuffled, first slide active) so server and client
   // markup match on first paint, the shuffle itself only ever runs client-side.
@@ -63,7 +68,8 @@ export default function ShuffleBackdrop({
             priority={preloadAll || slide.image === slides[0].image}
             quality={90}
             sizes="100vw"
-            className="object-cover object-center pointer-events-none select-none"
+            className="object-cover pointer-events-none select-none"
+            style={{ objectPosition }}
             draggable={false}
           />
         </div>
