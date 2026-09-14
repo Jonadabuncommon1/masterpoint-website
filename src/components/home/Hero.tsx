@@ -13,18 +13,16 @@ export default function Hero() {
 
   return (
     <section>
-      {/* The banners are all a fixed 1600x533 (3:1) canvas. On phones that
-          ratio reads as too short, so it's boosted to taller-than-square below
-          the sm breakpoint (cropping the sides via object-cover, shifted left
-          so the headline/CTA survive) and locked back to the native 3:1 - no
-          cropping - from sm upward. */}
-      <div className="relative aspect-[6/7] w-full overflow-hidden sm:aspect-[3/1]">
+      {/* The banners are all a fixed 1600x533 (3:1) canvas, so the container
+          stays locked to that exact ratio at every breakpoint - the full
+          picture is always visible, nothing cropped, on phone just like on
+          desktop. */}
+      <div className="relative aspect-[3/1] w-full overflow-hidden">
         <ShuffleBackdrop
           slides={heroSlides}
           intervalMs={6000}
           preloadAll
           onActiveChange={setActiveIndex}
-          objectPosition="35% center"
         />
         <h1 className="sr-only">
           Masterpoint Resources Ltd: Structural Excellence for Your Next Landmark Project
