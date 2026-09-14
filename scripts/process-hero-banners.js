@@ -9,11 +9,13 @@ const fs = require("fs");
 const SRC_DIR = path.join(__dirname, "assets-src", "hero-banners");
 const OUT_DIR = path.join(__dirname, "..", "public", "images", "hero");
 
+// All four source banners share an identical 1600x533 (3:1) canvas, so the
+// hero container can be locked to exactly that ratio and never crop them.
 const FILES = [
-  ["First.jpeg", "hero-banner-strength.jpg"],
-  ["Second.jpeg", "hero-banner-safety.jpg"],
-  ["Third.jpeg", "hero-banner-excellence.jpg"],
-  ["fourth.jpeg", "hero-banner-equipment.jpg"],
+  ["strength.jpeg", "hero-banner-strength.jpg"],
+  ["safety.jpeg", "hero-banner-safety.jpg"],
+  ["excellence.jpeg", "hero-banner-excellence.jpg"],
+  ["equipment.jpeg", "hero-banner-equipment.jpg"],
 ];
 
 async function main() {

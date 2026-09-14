@@ -13,7 +13,10 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="relative aspect-[1.9/1] w-full overflow-hidden sm:aspect-[2.2/1] lg:aspect-[2.6/1]">
+      {/* The banners are all a fixed 1600x533 (3:1) canvas, so locking the
+          container to that exact ratio means object-cover never has to crop
+          anything - the whole picture is always visible, top to bottom. */}
+      <div className="relative aspect-[3/1] w-full overflow-hidden">
         <ShuffleBackdrop
           slides={heroSlides}
           intervalMs={60000}
