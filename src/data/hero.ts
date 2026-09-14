@@ -1,18 +1,22 @@
 export const heroSlides = [
   {
     image: "/images/hero/hero-banner-strength.jpg",
+    mobileImage: "/images/hero/hero-banner-strength-mobile.jpg",
     alt: "Built on Strength. Delivered with Precision. Designed to Last.",
   },
   {
     image: "/images/hero/hero-banner-safety.jpg",
+    mobileImage: "/images/hero/hero-banner-safety-mobile.jpg",
     alt: "Safety Is Not an Option. It Is Our Standard.",
   },
   {
     image: "/images/hero/hero-banner-excellence.jpg",
+    mobileImage: "/images/hero/hero-banner-excellence-mobile.jpg",
     alt: "Structural Excellence for Your Next Landmark Project",
   },
   {
     image: "/images/hero/hero-banner-equipment.jpg",
+    mobileImage: "/images/hero/hero-banner-equipment-mobile.jpg",
     alt: "Quality Equipment. Safer Construction. Better Results.",
   },
 ];

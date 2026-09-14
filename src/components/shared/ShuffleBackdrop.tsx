@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { reshuffle } from "@/lib/shuffle";
 
-type Slide = { image: string; alt: string };
+type Slide = { image: string; mobileImage?: string; alt: string };
 
 export default function ShuffleBackdrop({
   slides,
@@ -61,6 +61,18 @@ export default function ShuffleBackdrop({
           style={{ opacity: slide.image === active.image ? 1 : 0 }}
           aria-hidden={slide.image !== active.image}
         >
+          {slide.mobileImage && (
+            <Image
+              src={slide.mobileImage}
+              alt={slide.alt}
+              fill
+              priority={preloadAll || slide.image === slides[0].image}
+              quality={90}
+              sizes="100vw"
+              className="object-cover pointer-events-none select-none sm:hidden"
+              draggable={false}
+            />
+          )}
           <Image
             src={slide.image}
             alt={slide.alt}
@@ -68,7 +80,7 @@ export default function ShuffleBackdrop({
             priority={preloadAll || slide.image === slides[0].image}
             quality={90}
             sizes="100vw"
-            className="object-cover pointer-events-none select-none"
+            className={`object-cover pointer-events-none select-none ${slide.mobileImage ? "hidden sm:block" : ""}`}
             style={{ objectPosition }}
             draggable={false}
           />
