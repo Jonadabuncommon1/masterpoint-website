@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="relative aspect-[3/1] w-full overflow-hidden">
         <ShuffleBackdrop
           slides={heroSlides}
-          intervalMs={60000}
+          intervalMs={6000}
           preloadAll
           onActiveChange={setActiveIndex}
         />
