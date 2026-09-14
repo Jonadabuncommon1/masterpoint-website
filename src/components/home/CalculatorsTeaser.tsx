@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "@/components/shared/Container";
 
 const TOOLS = [
@@ -18,23 +19,34 @@ const TOOLS = [
 
 export default function CalculatorsTeaser() {
   return (
-    <section className="bg-brand-blue py-16 sm:py-20">
-      <Container>
-        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-          <div className="max-w-lg">
-            <span className="text-sm font-bold uppercase tracking-widest text-white/80">
-              Free Interactive Tools
-            </span>
-            <h2 className="mt-3 text-balance font-heading text-3xl font-semibold uppercase text-white sm:text-4xl">
-              Plan Your Build With Confidence
-            </h2>
-            <p className="mt-4 text-white/85">
-              Stop guessing and start planning. Two free tools to help you budget accurately
-              before you spend a single naira.
-            </p>
-          </div>
+    <section className="relative overflow-hidden bg-brand-blue">
+      {/* Full-height picture only, no text — a banner strip above the cards on
+          mobile, a full-bleed left panel (touching the section's top and
+          bottom edges) from desktop up. */}
+      <div className="relative h-56 w-full sm:h-72 lg:absolute lg:inset-y-0 lg:left-0 lg:h-auto lg:w-[460px]">
+        <Image
+          src="/images/hero/section-calculators-teaser.jpg"
+          alt=""
+          fill
+          sizes="(min-width: 1024px) 460px, 100vw"
+          className="object-cover object-left pointer-events-none select-none"
+        />
+      </div>
 
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:w-auto lg:min-w-[560px]">
+      <Container className="py-8 sm:py-10 lg:py-20">
+        <div className="lg:pl-[500px]">
+          <span className="text-sm font-bold uppercase tracking-widest text-white/80">
+            Free Interactive Tools
+          </span>
+          <h2 className="mt-3 text-balance font-heading text-3xl font-semibold uppercase text-white sm:text-4xl">
+            Plan Your Build With Confidence
+          </h2>
+          <p className="mt-4 max-w-xl text-white/85">
+            Stop guessing and start planning. Two free tools to help you budget accurately
+            before you spend a single naira.
+          </p>
+
+          <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
             {TOOLS.map((tool) => (
               <Link
                 key={tool.title}
