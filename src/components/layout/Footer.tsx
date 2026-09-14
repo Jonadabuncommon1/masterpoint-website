@@ -22,8 +22,17 @@ const SOCIAL_ICON_PATHS: Record<(typeof SOCIALS)[number]["key"], string> = {
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy text-white/80">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+    <footer className="relative overflow-hidden bg-brand-navy text-white/80">
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.14]"
+        style={{
+          backgroundImage: "url('/images/hero/footer-equipment-blueprint.jpg')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "620px auto",
+        }}
+      />
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <Image
             src="/images/logo/masterpoint-logo-footer.png"
@@ -143,7 +152,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-6">
+      <div className="relative border-t border-white/10 py-6">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 text-xs text-white/50 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
           <p>Built for nationwide construction &amp; building materials supply.</p>
