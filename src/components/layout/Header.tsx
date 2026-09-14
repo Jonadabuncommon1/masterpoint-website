@@ -4,8 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { company } from "@/data/company";
-import { whatsappLink } from "@/lib/whatsapp";
 import { useCart } from "@/components/shop/CartContext";
 
 const NAV_LINKS = [
@@ -45,7 +43,7 @@ export default function Header() {
         scrolled ? "shadow-md" : "shadow-none border-b border-black/5"
       }`}
     >
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-6 xl:px-8">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Masterpoint Resources Ltd home">
           <Image
             src="/images/logo/masterpoint-logo-nav.png"
@@ -58,12 +56,12 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-3.5 2xl:gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:gap-5 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`whitespace-nowrap text-[13px] font-semibold tracking-wide transition-colors hover:text-brand-orange 2xl:text-sm ${
+              className={`whitespace-nowrap text-sm font-semibold tracking-wide transition-colors hover:text-brand-orange ${
                 pathname === link.href ? "text-brand-orange" : "text-brand-dark"
               }`}
             >
@@ -72,28 +70,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 2xl:gap-3 lg:flex">
-          <a
-            href={`tel:${company.phones[0].tel}`}
-            className="hidden whitespace-nowrap text-sm font-bold text-brand-dark transition-colors hover:text-brand-blue 2xl:block"
-          >
-            {company.phones[0].display}
-          </a>
-          <a
-            href={whatsappLink("Hello Masterpoint, I would like to make an enquiry.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="whitespace-nowrap rounded-md border-2 border-brand-blue px-2.5 py-2 text-[12px] font-bold text-brand-blue transition-colors hover:bg-brand-blue hover:text-white 2xl:px-4 2xl:text-sm"
-          >
-            <span className="2xl:hidden">WhatsApp</span>
-            <span className="hidden 2xl:inline">Chat on WhatsApp</span>
-          </a>
+        <div className="hidden items-center gap-2 xl:gap-3 lg:flex">
           <Link
             href="/materials"
-            className="whitespace-nowrap rounded-md bg-brand-orange px-2.5 py-2 text-[12px] font-bold text-white shadow-sm transition-colors hover:bg-brand-orange-dark 2xl:px-4 2xl:text-sm"
+            className="whitespace-nowrap rounded-md bg-brand-orange px-3 py-2 text-[13px] font-bold text-white shadow-sm transition-colors hover:bg-brand-orange-dark xl:px-4 xl:text-sm"
           >
-            <span className="2xl:hidden">Order Online</span>
-            <span className="hidden 2xl:inline">Order Materials Online</span>
+            Order Materials Online
           </Link>
           <Link href="/cart" aria-label="View order list" className="relative flex h-10 w-10 shrink-0 items-center justify-center text-brand-dark hover:text-brand-orange">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
@@ -156,20 +138,6 @@ export default function Header() {
             ))}
           </nav>
           <div className="mt-4 flex flex-col gap-3">
-            <a
-              href={`tel:${company.phones[0].tel}`}
-              className="rounded-md border-2 border-brand-dark px-4 py-3 text-center text-sm font-bold text-brand-dark"
-            >
-              Call {company.phones[0].display}
-            </a>
-            <a
-              href={whatsappLink("Hello Masterpoint, I would like to make an enquiry.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border-2 border-brand-blue px-4 py-3 text-center text-sm font-bold text-brand-blue"
-            >
-              Chat on WhatsApp
-            </a>
             <Link
               href="/materials"
               className="rounded-md bg-brand-orange px-4 py-3 text-center text-sm font-bold text-white"

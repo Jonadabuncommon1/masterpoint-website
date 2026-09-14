@@ -73,7 +73,7 @@ export default function FlutterwaveCheckout({ defaultAmount = 0 }: { defaultAmou
         <p className="font-heading text-lg font-semibold text-brand-dark">Payment Submitted</p>
         <p className="mt-2 text-sm text-brand-dark/65">
           Reference: <span className="font-mono">{reference}</span>. Please keep this for your
-          records — our team will confirm your payment shortly.
+          records. Our team will confirm your payment shortly.
         </p>
       </div>
     );

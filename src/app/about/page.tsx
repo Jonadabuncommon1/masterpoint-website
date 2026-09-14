@@ -27,7 +27,7 @@ const DIFFERENTIATORS = [
   },
   {
     title: "On Time, On Budget",
-    body: "We deliver your projects on time and within budget — guaranteed.",
+    body: "We deliver your projects on time and within budget, guaranteed.",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function AboutPage() {
             eyebrow="Leadership &amp; Site Supervision"
             title="Engineering Leadership You Can Trust"
             align="center"
-            description="Every Masterpoint project is led by certified site supervisors and an engineering leadership team with over a decade of hands-on experience, enforcing safety protocols and quality checks at every stage — from mobilisation to handover."
+            description="Every Masterpoint project is led by certified site supervisors and an engineering leadership team with over a decade of hands-on experience, enforcing safety protocols and quality checks at every stage, from mobilisation to handover."
           />
         </Container>
       </section>

@@ -14,7 +14,7 @@ export default function ServicesOverview() {
           <SectionHeading
             eyebrow="What We Do"
             title="Construction Services, End to End"
-            description="From architectural design through to final finishing, our trained and certified teams handle every stage of your build."
+            description="One team, one contract, zero chasing. From architectural design through to final finishing, our trained and certified crews handle every stage of your build."
           />
           <Link
             href="/services"

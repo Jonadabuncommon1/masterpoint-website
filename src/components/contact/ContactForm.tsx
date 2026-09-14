@@ -12,7 +12,7 @@ export default function ContactForm() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const text = [
-      `Hello Masterpoint, my name is ${name || "—"}.`,
+      `Hello Masterpoint, my name is ${name || "Not provided"}.`,
       `Subject: ${subject}`,
       phone ? `My phone number: ${phone}` : null,
       message ? `Message: ${message}` : null,

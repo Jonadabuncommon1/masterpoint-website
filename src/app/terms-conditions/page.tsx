@@ -30,8 +30,8 @@ export default function TermsConditionsPage() {
           <div>
             <h2 className="font-heading text-xl font-semibold text-brand-dark">1. Our Services</h2>
             <p className="mt-3">
-              We provide construction services — including architectural design, structural
-              drawings, Bills of Quantities, town planning approvals and full project supervision —
+              We provide construction services, including architectural design, structural
+              drawings, Bills of Quantities, town planning approvals and full project supervision,
               alongside the direct supply of building materials, nationwide across Nigeria.
             </p>
           </div>
@@ -47,12 +47,12 @@ export default function TermsConditionsPage() {
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-brand-dark">3. Payment Terms — Construction Contracts</h2>
+            <h2 className="font-heading text-xl font-semibold text-brand-dark">3. Payment Terms for Construction Contracts</h2>
             <p className="mt-3">{company.payment.mobilisationDeposit}, with further instalments tied to agreed project milestones as set out in your specific contract.</p>
           </div>
 
           <div>
-            <h2 className="font-heading text-xl font-semibold text-brand-dark">4. Payment Terms — Building Materials</h2>
+            <h2 className="font-heading text-xl font-semibold text-brand-dark">4. Payment Terms for Building Materials</h2>
             <p className="mt-3">{company.payment.materialsPolicy}</p>
           </div>
 

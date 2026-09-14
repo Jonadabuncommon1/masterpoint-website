@@ -24,8 +24,9 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
             Property developers, structural engineers, homeowners and corporate estate firms trust
-            Masterpoint for uncompromising quality and precision building solutions — backed by{" "}
-            {company.yearsExperience} years of combined experience, nationwide.
+            Masterpoint for uncompromising quality and precision building solutions, backed by{" "}
+            {company.yearsExperience} years of combined experience, nationwide. Direct-source
+            materials, certified site supervision, and a firm quote before you spend a single naira.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

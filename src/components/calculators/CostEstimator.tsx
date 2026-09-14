@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { whatsappLink } from "@/lib/whatsapp";
 
 // Indicative average build cost per square metre (Naira), inclusive of materials and labour.
-// These are ballpark planning figures only — review and update periodically as material
+// These are ballpark planning figures only, review and update periodically as material
 // and labour costs move, and always confirm with a formal site quotation.
 const RATE_PER_SQM: Record<string, number> = {
   Shell: 150000,
@@ -89,7 +89,7 @@ export default function CostEstimator() {
         </p>
         <p className="mt-3 text-xs leading-relaxed text-brand-dark/55">
           This is a rough planning figure only. Actual cost depends on your location, design,
-          ground conditions and current material prices — request a firm quotation below.
+          ground conditions and current material prices. Request a firm quotation below.
         </p>
       </div>
 

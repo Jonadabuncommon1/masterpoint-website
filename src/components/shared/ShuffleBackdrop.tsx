@@ -16,7 +16,7 @@ export default function ShuffleBackdrop({
   priorityFirst?: boolean;
 }) {
   // Start deterministic (unshuffled, first slide active) so server and client
-  // markup match on first paint — the shuffle itself only ever runs client-side.
+  // markup match on first paint, the shuffle itself only ever runs client-side.
   const order = useRef<Slide[]>(slides);
   const cursor = useRef(0);
   const [active, setActive] = useState(slides[0]);

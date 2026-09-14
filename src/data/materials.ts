@@ -45,7 +45,7 @@ export const materials: Material[] = [
   },
   {
     id: "tmt-12mm",
-    name: "TMT Iron Rod — 12mm",
+    name: "12mm TMT Iron Rod",
     category: "Reinforcement & Steel",
     unit: "per length",
     description: "High-tensile TMT reinforcement rod for general structural work.",
@@ -53,7 +53,7 @@ export const materials: Material[] = [
   },
   {
     id: "tmt-16mm",
-    name: "TMT Iron Rod — 16mm",
+    name: "16mm TMT Iron Rod",
     category: "Reinforcement & Steel",
     unit: "per length",
     description: "High-tensile TMT reinforcement rod for columns and heavy structural loads.",

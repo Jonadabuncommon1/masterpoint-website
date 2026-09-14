@@ -20,7 +20,7 @@ export default function ContactPage() {
             Let&apos;s Talk About Your Project
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/75">
-            Reach us by phone, WhatsApp or email — or send a message below and we&apos;ll get back to you.
+            Reach us by phone, WhatsApp or email, or send a message below and we&apos;ll get back to you.
           </p>
         </Container>
       </section>

@@ -14,7 +14,7 @@ export default function CartPage() {
       ? ""
       : [
           "Hello Masterpoint, I would like to order the following materials:",
-          ...items.map((i) => `• ${i.name} — Qty: ${i.qty} (${i.unit})`),
+          ...items.map((i) => `• ${i.name}, Qty: ${i.qty} (${i.unit})`),
           "Please confirm availability, pricing and delivery.",
         ].join("\n");
 

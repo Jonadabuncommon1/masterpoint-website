@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { whatsappLink } from "@/lib/whatsapp";
 
 // Typical rule-of-thumb coverage figures used in Nigerian site practice. Actual
-// quantities vary with block size, mortar joint thickness and wastage — treat as
+// quantities vary with block size, mortar joint thickness and wastage, treat as
 // a planning guide, not a final Bill of Quantities.
 const BLOCKS_PER_SQM: Record<string, number> = {
   '6" Block': 13,
@@ -93,7 +93,7 @@ export default function QuantityCalculator() {
         </div>
       </div>
       <p className="mt-4 text-xs leading-relaxed text-brand-dark/55">
-        Includes a 5% wastage allowance. Figures are a planning guide only — final quantities
+        Includes a 5% wastage allowance. Figures are a planning guide only, final quantities
         depend on your specific design and site conditions.
       </p>
 

@@ -68,7 +68,7 @@ export default function ServicesPage() {
             <SectionHeading
               eyebrow="Design to Build"
               title="A Complete Service, Start to Finish"
-              description="We offer a full service from design through to build — not just the physical construction work."
+              description="We offer a full service from design through to build, not just the physical construction work."
             />
             <ul className="mt-6 space-y-3">
               {designToBuildCapabilities.map((item) => (

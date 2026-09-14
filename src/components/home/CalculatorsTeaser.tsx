@@ -29,7 +29,8 @@ export default function CalculatorsTeaser() {
               Plan Your Build With Confidence
             </h2>
             <p className="mt-4 text-white/85">
-              Two free tools built to help you plan and budget before you place an order.
+              Stop guessing and start planning. Two free tools to help you budget accurately
+              before you spend a single naira.
             </p>
           </div>
 

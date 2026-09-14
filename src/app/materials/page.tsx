@@ -22,8 +22,8 @@ export default function MaterialsPage() {
             Order Materials Online
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/75">
-            Browse our catalogue, add what you need to your order list, and send it straight to
-            our team — or request a quote directly on WhatsApp.
+            No middlemen, no mark-ups. Browse our catalogue, add what you need to your order list,
+            and send it straight to our team, or request a quote directly on WhatsApp.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/60">
             <Link href="/cart" className="font-bold text-brand-blue hover:text-white">

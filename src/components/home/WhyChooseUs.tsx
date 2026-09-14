@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
         <SectionHeading
           eyebrow="Why Masterpoint"
           title="Built on Unyielding Structural Integrity"
-          description="We combine direct-source building materials, rigorous quality inspections and elite craftsmanship to deliver your projects on time and within budget — guaranteed."
+          description="We combine direct-source building materials, rigorous quality inspections and elite craftsmanship to deliver your projects on time and within budget, guaranteed."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

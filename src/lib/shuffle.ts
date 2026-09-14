@@ -1,5 +1,5 @@
 // Fisher-Yates shuffle that also guarantees the first item of a freshly-shuffled
-// round never repeats the last item shown at the end of the previous round —
+// round never repeats the last item shown at the end of the previous round,
 // a true shuffle (no back-to-back repeats) rather than plain random.
 export function reshuffle<T>(items: T[], avoidFirst?: T): T[] {
   const arr = [...items];

@@ -11,11 +11,11 @@ export default function CTABanner() {
       <Container className="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
         <div className="max-w-xl">
           <h2 className="text-balance font-heading text-3xl font-semibold uppercase text-white sm:text-4xl">
-            Ready to Start Your Next Project?
+            Don&apos;t Let Poor Materials Ruin Your Build
           </h2>
           <p className="mt-4 text-white/75">
-            Speak to our team today for a free consultation, or request a quote on materials for
-            your site. {company.slogan}
+            Every day you wait is a day closer to a rushed decision. Speak to our team today for a
+            free consultation, or request a quote on materials for your site. {company.slogan}
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">

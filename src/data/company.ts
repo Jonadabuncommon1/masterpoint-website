@@ -11,7 +11,7 @@ export const company = {
   ],
   address: {
     line1: "27 Timber Shade, Urban Girls Road",
-    line2: "Adjacent Ogbons Aluminium & Peace Line",
+    line2: "Adjacent to Ogbons Aluminium & Peace Line",
     city: "Nsukka",
     state: "Enugu State",
     country: "Nigeria",

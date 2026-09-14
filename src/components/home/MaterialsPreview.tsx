@@ -14,7 +14,7 @@ export default function MaterialsPreview() {
           <SectionHeading
             eyebrow="Building Materials Supply"
             title="Direct-Source Materials, Delivered Nationwide"
-            description="Cement, steel, blocks, roofing, tiles and more — order online or request a quote and we deliver to your site."
+            description="Cement, steel, blocks, roofing, tiles and more, in stock and ready to go. Order online or request a quote and we deliver straight to your site."
           />
           <Link
             href="/materials"

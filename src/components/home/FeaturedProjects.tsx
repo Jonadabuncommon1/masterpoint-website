@@ -56,7 +56,7 @@ export default function FeaturedProjects() {
           <SectionHeading
             eyebrow="Our Work"
             title="Projects Delivered Nationwide"
-            description="A look at recent structural, finishing and estate infrastructure work across Nigeria."
+            description="Don't just take our word for it. See the structural, finishing and estate infrastructure work speaking for itself across Nigeria."
           />
           <Link
             href="/projects"
@@ -75,7 +75,7 @@ export default function FeaturedProjects() {
             >
               <ProtectedImage
                 src={item.image}
-                alt={`${item.title} — ${item.location}`}
+                alt={`${item.title}, ${item.location}`}
                 fill
                 sizes="(min-width: 640px) 50vw, 100vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"

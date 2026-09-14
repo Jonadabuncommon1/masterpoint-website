@@ -76,8 +76,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="font-heading text-xl font-semibold text-brand-dark">5. Sharing of Information</h2>
             <p className="mt-3">
               We do not sell your personal information. We may share limited information with
-              trusted partners strictly where necessary to deliver your project or order — for
-              example, our payment processor (Flutterwave) to complete a transaction, or a logistics
+              trusted partners strictly where necessary to deliver your project or order, for
+              example our payment processor (Flutterwave) to complete a transaction, or a logistics
               partner to fulfil a delivery.
             </p>
           </div>

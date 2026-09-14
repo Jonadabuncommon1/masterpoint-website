@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { CartProvider } from "@/components/shop/CartContext";
 import { company } from "@/data/company";
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <CartProvider>
           <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <ConditionalFooter />
           <WhatsAppButton />
         </CartProvider>
       </body>
