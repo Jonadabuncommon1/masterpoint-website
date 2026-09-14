@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  /* Brand palette */
+  --color-brand-orange: #ff6b00;
+  --color-brand-orange-dark: #d95700;
+  --color-brand-orange-light: #ff8a33;
+  --color-brand-blue: #00a8ff;
+  --color-brand-blue-dark: #0086cc;
+  --color-brand-green: #00e676;
+  --color-brand-green-dark: #00b85e;
+  --color-brand-dark: #1a1a1a;
+  --color-brand-dark-soft: #262626;
+  --color-brand-dark-line: #333333;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-orange: var(--color-brand-orange);
+  --color-brand-orange-dark: var(--color-brand-orange-dark);
+  --color-brand-orange-light: var(--color-brand-orange-light);
+  --color-brand-blue: var(--color-brand-blue);
+  --color-brand-blue-dark: var(--color-brand-blue-dark);
+  --color-brand-green: var(--color-brand-green);
+  --color-brand-green-dark: var(--color-brand-green-dark);
+  --color-brand-dark: var(--color-brand-dark);
+  --color-brand-dark-soft: var(--color-brand-dark-soft);
+  --color-brand-dark-line: var(--color-brand-dark-line);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-oswald);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Arial, sans-serif;
+}
+
+/* Prevent casual right-click/drag saving of gallery and hero photography. */
+.no-download {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: auto;
+}
+.no-download img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+@keyframes fade-cross {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-brand-orange);
+  color: #ffffff;
+}
