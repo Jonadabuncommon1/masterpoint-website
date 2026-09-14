@@ -34,7 +34,7 @@ export const company = {
   ],
   stats: [
     { value: 12, suffix: "+", label: "Years of combined experience" },
-    { value: 11, suffix: "", label: "States delivered across" },
+    { value: 11, suffix: "+", label: "States delivered across" },
     { value: 30, suffix: "+", label: "Projects completed nationwide" },
     { value: 100, suffix: "%", label: "Certified site supervision" },
   ],
