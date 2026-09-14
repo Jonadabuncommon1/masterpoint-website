@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
+import ShuffleBackdrop from "@/components/shared/ShuffleBackdrop";
 import Container from "@/components/shared/Container";
+import { calculatorsSlideshow } from "@/data/hero";
 
 const TOOLS = [
   {
@@ -21,28 +22,15 @@ export default function CalculatorsTeaser() {
   return (
     <section className="bg-brand-blue py-16 sm:py-20">
       <Container>
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center">
-          {/* Shown at its own natural proportions, never cropped — it only
-              takes up part of the section, the write-ups sit to the right. */}
-          <div className="w-full max-w-lg shrink-0 lg:w-[38%]">
-            <Image
-              src="/images/hero/section-calculators-teaser.jpg"
-              alt=""
-              width={1536}
-              height={1024}
-              sizes="(min-width: 1024px) 38vw, 100vw"
-              className="h-auto w-full rounded-2xl"
-            />
-          </div>
-
+        <div className="flex flex-col items-stretch gap-10 lg:flex-row">
           <div className="w-full lg:flex-1">
-            <span className="text-sm font-bold uppercase tracking-widest text-white/80">
+            <span className="text-sm font-extrabold uppercase tracking-widest text-white">
               Free Interactive Tools
             </span>
-            <h2 className="mt-3 text-balance font-heading text-3xl font-semibold uppercase text-white sm:text-4xl">
+            <h2 className="mt-3 text-balance font-heading text-3xl font-bold uppercase text-white antialiased sm:text-4xl">
               Plan Your Build With Confidence
             </h2>
-            <p className="mt-4 max-w-xl text-white/85">
+            <p className="mt-4 max-w-xl font-medium text-white antialiased">
               Stop guessing and start planning. Two free tools to help you budget accurately
               before you spend a single naira.
             </p>
@@ -67,6 +55,12 @@ export default function CalculatorsTeaser() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Sliding gallery of equipment/PPE photos, same height as the
+              column on the left, changing every 2 seconds. */}
+          <div className="relative h-64 w-full overflow-hidden rounded-2xl sm:h-80 lg:h-auto lg:w-[420px] lg:shrink-0">
+            <ShuffleBackdrop slides={calculatorsSlideshow} intervalMs={2000} />
           </div>
         </div>
       </Container>

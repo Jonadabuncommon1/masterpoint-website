@@ -17,6 +17,18 @@ export const heroSlides = [
   },
 ];
 
+export const calculatorsSlideshow = [
+  { image: "/images/hero/slide-excavator-yellow.jpg", alt: "Masterpoint excavator on site" },
+  { image: "/images/hero/slide-excavator-blue.jpg", alt: "Masterpoint excavator and haul trucks" },
+  { image: "/images/hero/slide-mixer-site-1.jpg", alt: "Masterpoint concrete mixer on a construction site" },
+  { image: "/images/hero/slide-mixer-site-2.jpg", alt: "Masterpoint concrete mixer loaded and ready" },
+  { image: "/images/hero/slide-crane-truck.jpg", alt: "Masterpoint crane-mounted delivery truck" },
+  { image: "/images/hero/slide-road-roller.jpg", alt: "Masterpoint road roller" },
+  { image: "/images/hero/slide-ppe-hat-vest.jpg", alt: "Masterpoint hard hat and high-visibility vest" },
+  { image: "/images/hero/slide-ppe-vests.jpg", alt: "Masterpoint high-visibility vests" },
+  { image: "/images/hero/slide-ppe-helmet.jpg", alt: "Masterpoint hard hat on site" },
+];
+
 export const equipmentShowcase = [
   {
     image: "/images/equipment/equipment-crane-truck.jpg",
