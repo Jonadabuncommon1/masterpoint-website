@@ -7,13 +7,12 @@ import { usePathname } from "next/navigation";
 import { useCart } from "@/components/shop/CartContext";
 
 const NAV_LINKS = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services" },
-  { href: "/materials", label: "Materials" },
-  { href: "/calculators", label: "Calculators" },
-  { href: "/projects", label: "Projects" },
-  { href: "/faq", label: "FAQs" },
-  { href: "/contact", label: "Contact" },
+  { href: "/services", label: "Construction Services" },
+  { href: "/materials", label: "Building Materials" },
+  { href: "/projects", label: "Projects / Portfolio" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export default function Header() {
@@ -43,7 +42,7 @@ export default function Header() {
         scrolled ? "shadow-md" : "shadow-none border-b border-black/5"
       }`}
     >
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-6 xl:px-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:gap-3 lg:px-4 xl:px-8">
         <Link href="/" className="flex shrink-0 items-center" aria-label="Masterpoint Resources Ltd home">
           <Image
             src="/images/logo/masterpoint-logo-nav.png"
@@ -56,12 +55,12 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-4 xl:gap-5 lg:flex">
+        <nav className="hidden items-center gap-2 xl:gap-5 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`whitespace-nowrap text-sm font-semibold tracking-wide transition-colors hover:text-brand-orange ${
+              className={`whitespace-nowrap text-[13px] font-semibold tracking-wide transition-colors hover:text-brand-orange xl:text-sm ${
                 pathname === link.href ? "text-brand-orange" : "text-brand-dark"
               }`}
             >
@@ -70,12 +69,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 xl:gap-3 lg:flex">
+        <div className="hidden items-center gap-1.5 xl:gap-3 lg:flex">
           <Link
             href="/materials"
             className="whitespace-nowrap rounded-md bg-brand-orange px-3 py-2 text-[13px] font-bold text-white shadow-sm transition-colors hover:bg-brand-orange-dark xl:px-4 xl:text-sm"
           >
-            Order Materials Online
+            <span className="xl:hidden">Order Online</span>
+            <span className="hidden xl:inline">Order Materials Online</span>
           </Link>
           <Link href="/cart" aria-label="View order list" className="relative flex h-10 w-10 shrink-0 items-center justify-center text-brand-dark hover:text-brand-orange">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
