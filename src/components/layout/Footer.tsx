@@ -22,7 +22,7 @@ const SOCIAL_ICON_PATHS: Record<(typeof SOCIALS)[number]["key"], string> = {
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-white/80">
+    <footer className="bg-brand-navy text-white/80">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <Image

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter, Oswald, Rajdhani } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
@@ -17,6 +17,14 @@ const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+  display: "swap",
+});
+
+// A technical, drafting-table feel for the CTA banner headline specifically.
+const rajdhani = Rajdhani({
+  variable: "--font-rajdhani",
+  subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -53,7 +61,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-GB" className={`${inter.variable} ${oswald.variable} h-full antialiased`}>
+    <html lang="en-GB" className={`${inter.variable} ${oswald.variable} ${rajdhani.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-brand-dark">
         <CartProvider>
           <Header />

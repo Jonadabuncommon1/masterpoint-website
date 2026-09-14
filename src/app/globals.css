@@ -15,6 +15,10 @@
   --color-brand-dark: #1a1a1a;
   --color-brand-dark-soft: #262626;
   --color-brand-dark-line: #333333;
+  --color-brand-rust: #4a1f05;
+  --color-brand-rust-light: #6b2e08;
+  --color-brand-navy: #0b2a4a;
+  --color-brand-navy-light: #123a63;
 }
 
 @theme inline {
@@ -30,8 +34,13 @@
   --color-brand-dark: var(--color-brand-dark);
   --color-brand-dark-soft: var(--color-brand-dark-soft);
   --color-brand-dark-line: var(--color-brand-dark-line);
+  --color-brand-rust: var(--color-brand-rust);
+  --color-brand-rust-light: var(--color-brand-rust-light);
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-navy-light: var(--color-brand-navy-light);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-oswald);
+  --font-engineering: var(--font-rajdhani);
 }
 
 body {
