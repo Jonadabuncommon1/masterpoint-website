@@ -39,24 +39,39 @@ export default function ShuffleBackdrop({
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-brand-dark">
-      {slides.map((slide) => (
-        <div
-          key={slide.image}
-          className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
-          style={{ opacity: slide.image === active.image ? 1 : 0 }}
-          aria-hidden={slide.image !== active.image}
-        >
-          <Image
-            src={slide.image}
-            alt={slide.alt}
-            fill
-            priority={priorityFirst && slide.image === slides[0].image}
-            sizes="100vw"
-            className="object-cover pointer-events-none select-none"
-            draggable={false}
-          />
-        </div>
-      ))}
+      {slides.map((slide) => {
+        const isPriority = priorityFirst && slide.image === slides[0].image;
+        return (
+          <div
+            key={slide.image}
+            className="absolute inset-0 transition-opacity duration-[1400ms] ease-in-out"
+            style={{ opacity: slide.image === active.image ? 1 : 0 }}
+            aria-hidden={slide.image !== active.image}
+          >
+            {/* Blurred, zoomed copy fills every edge so the frame never shows bare bars. */}
+            <Image
+              src={slide.image}
+              alt=""
+              aria-hidden="true"
+              fill
+              priority={isPriority}
+              sizes="100vw"
+              className="scale-110 object-cover object-center pointer-events-none select-none blur-2xl brightness-[0.55] saturate-125"
+              draggable={false}
+            />
+            {/* The full photo, uncropped, always shows the whole vehicle/equipment. */}
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority={isPriority}
+              sizes="100vw"
+              className="object-contain object-center pointer-events-none select-none"
+              draggable={false}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
