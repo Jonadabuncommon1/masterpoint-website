@@ -72,7 +72,7 @@ export default function Header() {
         <div className="hidden items-center gap-1.5 xl:gap-3 lg:flex">
           <Link
             href="/materials"
-            className="whitespace-nowrap rounded-md bg-brand-orange px-3 py-2 text-[13px] font-bold text-white shadow-sm transition-colors hover:bg-brand-orange-dark xl:px-4 xl:text-sm"
+            className="animate-[cta-glow_2s_ease-in-out_infinite] whitespace-nowrap rounded-md bg-brand-orange px-3 py-2 text-[13px] font-bold text-white transition-colors hover:bg-brand-orange-dark xl:px-4 xl:text-sm"
           >
             <span className="xl:hidden">Order Online</span>
             <span className="hidden xl:inline">Order Materials Online</span>
@@ -109,7 +109,7 @@ export default function Header() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded-md text-brand-dark lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-brand-dark max-sm:animate-[menu-glow_2.2s_ease-in-out_infinite] lg:hidden"
         >
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? (
@@ -140,7 +140,7 @@ export default function Header() {
           <div className="mt-4 flex flex-col gap-3">
             <Link
               href="/materials"
-              className="rounded-md bg-brand-orange px-4 py-3 text-center text-sm font-bold text-white"
+              className="animate-[cta-glow_2s_ease-in-out_infinite] rounded-md bg-brand-orange px-4 py-3 text-center text-sm font-bold text-white"
             >
               Order Materials Online
             </Link>
