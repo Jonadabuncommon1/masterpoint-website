@@ -7,7 +7,6 @@ export default function Testimonials() {
     <section className="bg-[#F7F7F7] py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Client Confidence"
           title="What Our Clients Say"
           align="center"
         />

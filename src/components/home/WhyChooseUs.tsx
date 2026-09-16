@@ -46,7 +46,6 @@ export default function WhyChooseUs() {
     <section className="bg-white py-20 sm:py-24">
       <Container>
         <SectionHeading
-          eyebrow="Why Masterpoint"
           title="Built on Unyielding Structural Integrity"
           description="We combine direct-source building materials, rigorous quality inspections and elite craftsmanship to deliver your projects on time and within budget, guaranteed."
         />
