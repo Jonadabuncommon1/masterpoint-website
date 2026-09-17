@@ -46,7 +46,7 @@ export const projects: Project[] = [
     title: "Ketu Residential Project",
     location: "Ketu, Lagos",
     category: "Residential",
-    images: [img("ketu-lagos")],
+    images: [img("ketu-lagos-1"), img("ketu-lagos-2")],
   },
   {
     slug: "mile-2-lagos",
