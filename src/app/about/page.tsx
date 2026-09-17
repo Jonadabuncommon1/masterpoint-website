@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ProtectedImage from "@/components/shared/ProtectedImage";
+import RotatingHardHat from "@/components/shared/RotatingHardHat";
 import SectionHeading from "@/components/shared/SectionHeading";
 import Container from "@/components/shared/Container";
 import StatCounter from "@/components/shared/StatCounter";
@@ -65,15 +65,7 @@ export default function AboutPage() {
               execution on every site.
             </p>
           </div>
-          <div className="relative h-80 overflow-hidden rounded-2xl sm:h-[420px]">
-            <ProtectedImage
-              src="/images/projects/structural-build-04.jpg"
-              alt="Masterpoint structural build in progress"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <RotatingHardHat />
         </Container>
       </section>
 
