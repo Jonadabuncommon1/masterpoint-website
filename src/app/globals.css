@@ -98,11 +98,6 @@ h1, h2, h3, h4, h5, h6 {
   50% { box-shadow: 0 0 22px 6px rgba(255, 107, 0, 0.9); }
 }
 
-@keyframes spin-y {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
-}
-
 .text-balance {
   text-wrap: balance;
 }
