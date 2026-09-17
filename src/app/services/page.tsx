@@ -7,6 +7,7 @@ import { services, designToBuildCapabilities } from "@/data/services";
 import { company } from "@/data/company";
 import { whatsappLink } from "@/lib/whatsapp";
 import EquipmentShowcase from "@/components/home/EquipmentShowcase";
+import ProjectStarterGuide from "@/components/services/ProjectStarterGuide";
 
 export const metadata: Metadata = {
   title: "Construction Services",
@@ -109,6 +110,8 @@ export default function ServicesPage() {
           </div>
         </Container>
       </section>
+
+      <ProjectStarterGuide />
 
       <EquipmentShowcase />
     </>

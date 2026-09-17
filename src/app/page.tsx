@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero";
+import StartProjectBanner from "@/components/home/StartProjectBanner";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import MaterialsPreview from "@/components/home/MaterialsPreview";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StartProjectBanner />
       <WhyChooseUs />
       <ServicesOverview />
       <MaterialsPreview />
