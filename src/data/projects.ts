@@ -50,9 +50,9 @@ export const projects: Project[] = [
   },
   {
     slug: "mile-2-lagos",
-    title: "Mile 2 Residential Project",
-    location: "Mile 2, Lagos",
-    category: "Residential",
+    title: "Ketu Office Building",
+    location: "Ketu, Lagos",
+    category: "Commercial",
     images: [img("mile-2-lagos")],
   },
   {
@@ -131,7 +131,7 @@ export const projects: Project[] = [
   },
   {
     slug: "interior-finishing",
-    title: "Interior Finishing & Tiling",
+    title: "Exterior Finishing & Tiling",
     location: "Nationwide",
     category: "Finishing",
     images: [img("tiling-finishing-01"), img("tiling-finishing-02")],

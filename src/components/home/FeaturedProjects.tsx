@@ -20,7 +20,7 @@ const SHOWCASE = [
   },
   {
     image: "/images/projects/ikosi-isheri-1.jpg",
-    title: "Residential Build",
+    title: "Office Building",
     location: "Ikosi-Isheri LCDA, Lagos",
     span: "",
     aspect: "aspect-square",
@@ -41,7 +41,7 @@ const SHOWCASE = [
   },
   {
     image: "/images/projects/tiling-finishing-02.jpg",
-    title: "Interior Finishing",
+    title: "Exterior Finishing",
     location: "Nationwide",
     span: "sm:col-span-2",
     aspect: "aspect-[16/9]",
