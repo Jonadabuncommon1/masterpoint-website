@@ -3,8 +3,9 @@ import Container from "@/components/shared/Container";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions",
-  description: "The Masterpoint Resources Ltd Terms and Conditions of business.",
+  title: "Terms and Conditions",
+  description:
+    "The terms and conditions governing construction contracts and building materials orders with Masterpoint Resources Ltd, Nigeria's building contractor and materials supplier. Transparent, fair, and built to protect you.",
 };
 
 const lastUpdated = "14 September 2026";
@@ -21,7 +22,7 @@ export default function TermsConditionsPage() {
 
         <div className="prose-custom mt-10 space-y-8 text-sm leading-relaxed text-brand-dark/80 sm:text-base">
           <p>
-            These Terms and Conditions govern your use of this website and any construction
+            These Terms and Conditions govern your use of this website and any building contractor
             services or building materials supplied by {company.legalName} (&quot;Masterpoint&quot;,
             &quot;we&quot;, &quot;us&quot; or &quot;our&quot;). By using this website, requesting a
             quotation, or placing an order, you agree to these terms.

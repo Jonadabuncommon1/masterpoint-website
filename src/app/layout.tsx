@@ -33,16 +33,21 @@ const siteUrl = "https://masterpointresources.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Masterpoint Resources Ltd | Construction & Building Materials, Nationwide",
+    default: "Masterpoint Resources Ltd | Building Contractor and Materials Supplier, Nigeria",
     template: "%s | Masterpoint Resources Ltd",
   },
   description:
-    "Masterpoint Resources Limited delivers nationwide construction services and direct-source building materials, backed by 12 years of experience and certified site supervision. Meeting the test of eternal beauty.",
+    "Nigeria's trusted building contractor and building materials supplier. We deliver structural construction, finishing works, roofing, stamped concrete, and direct-source materials to your site, nationwide. 12 years of certified experience. Get a quote today.",
   keywords: [
-    "construction company Nigeria",
+    "building contractor Nigeria",
+    "building contractor Enugu",
     "building materials supplier Nigeria",
+    "construction company Nigeria",
     "cement supplier Nigeria",
     "structural steel Nigeria",
+    "roofing contractor Nigeria",
+    "building materials delivery Nigeria",
+    "construction services Nigeria",
     "Masterpoint Resources",
   ],
   icons: {
@@ -50,8 +55,9 @@ export const metadata: Metadata = {
     apple: "/images/logo/masterpoint-icon.png",
   },
   openGraph: {
-    title: "Masterpoint Resources Ltd | Construction & Building Materials, Nationwide",
-    description: company.slogan,
+    title: "Masterpoint Resources Ltd | Building Contractor and Materials Supplier, Nigeria",
+    description:
+      "Nigeria's trusted building contractor and building materials supplier. Structural construction, finishing works, and direct-source materials delivered nationwide. 12 years of certified experience.",
     url: siteUrl,
     siteName: "Masterpoint Resources Ltd",
     locale: "en_GB",

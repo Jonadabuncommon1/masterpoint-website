@@ -5,9 +5,9 @@ import { company } from "@/data/company";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us | Get a Quote from Our Building Contractor Team",
   description:
-    "Get in touch with Masterpoint Resources Ltd for construction enquiries, materials orders and quotes. Call, WhatsApp or visit our Nsukka office.",
+    "Ready to start your project? Contact Masterpoint Resources Ltd, Nigeria's building contractor and materials supplier. Call, WhatsApp, or visit our Nsukka office. We respond quickly.",
 };
 
 export default function ContactPage() {

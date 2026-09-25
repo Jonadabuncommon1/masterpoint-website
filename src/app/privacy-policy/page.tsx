@@ -4,7 +4,8 @@ import { company } from "@/data/company";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "The Masterpoint Resources Ltd Privacy & Confidentiality Policy.",
+  description:
+    "Read the privacy and confidentiality policy of Masterpoint Resources Ltd, Nigeria's building contractor and building materials supplier. We protect your plans, personal details, and data.",
 };
 
 const lastUpdated = "14 September 2026";
@@ -22,9 +23,9 @@ export default function PrivacyPolicyPage() {
         <div className="prose-custom mt-10 space-y-8 text-sm leading-relaxed text-brand-dark/80 sm:text-base">
           <p>
             {company.legalName} (&quot;Masterpoint&quot;, &quot;we&quot;, &quot;us&quot; or
-            &quot;our&quot;) is committed to protecting the privacy and confidentiality of everyone
-            who visits this website, makes an enquiry, or engages us for construction services or
-            building materials. This policy explains what information we collect, how we use it,
+            &quot;our&quot;) is a building contractor and building materials supplier committed to
+            protecting the privacy and confidentiality of everyone who visits this website, makes an
+            enquiry, or engages us for construction or materials supply services. This policy explains what information we collect, how we use it,
             and the promises we make in return for your trust.
           </p>
 

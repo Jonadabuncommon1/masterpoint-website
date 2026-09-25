@@ -7,9 +7,9 @@ import { company } from "@/data/company";
 import { safetyStandards } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us | 12 Years of Building Nigeria",
   description:
-    "12 years of unyielding structural integrity. Learn about Masterpoint Resources Limited, our certifications, and the states we've delivered projects across.",
+    "Masterpoint Resources Ltd is a building contractor with 12 years of certified construction experience across Nigeria. From Enugu to Lagos, we build structures that last. Meet the people behind the work.",
 };
 
 const DIFFERENTIATORS = [

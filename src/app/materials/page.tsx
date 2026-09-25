@@ -5,9 +5,9 @@ import MaterialsCatalogue from "@/components/shop/MaterialsCatalogue";
 import { deliveryTerms, materialsNote } from "@/data/materials";
 
 export const metadata: Metadata = {
-  title: "Building Materials Shop",
+  title: "Building Materials Shop | Order Online, Delivered Nationwide",
   description:
-    "Order cement, steel, blocks, roofing, tiles and more from Masterpoint Resources Ltd. Direct-source building materials delivered nationwide.",
+    "Buy cement, steel, blocks, roofing sheets, tiles, and more directly from Nigeria's trusted building materials supplier. Masterpoint Resources Ltd delivers to your site, nationwide. Order online today.",
 };
 
 export default function MaterialsPage() {

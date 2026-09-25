@@ -10,9 +10,9 @@ import EquipmentShowcase from "@/components/home/EquipmentShowcase";
 import ProjectStarterGuide from "@/components/services/ProjectStarterGuide";
 
 export const metadata: Metadata = {
-  title: "Construction Services",
+  title: "Construction Services | Building Contractor Nationwide",
   description:
-    "Residential, commercial and industrial construction services, full design-to-build capability, and structural guarantees of 2 to 5 years, delivered nationwide.",
+    "Residential, commercial, and structural construction by a building contractor you can trust. Full design-to-build capability, certified site supervision, and a 2 to 5 year structural guarantee, delivered nationwide across Nigeria.",
 };
 
 export default function ServicesPage() {

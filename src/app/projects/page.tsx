@@ -3,9 +3,9 @@ import Container from "@/components/shared/Container";
 import ProjectsGallery from "@/components/projects/ProjectsGallery";
 
 export const metadata: Metadata = {
-  title: "Our Projects",
+  title: "Our Projects | Building Contractor Portfolio, Nationwide",
   description:
-    "Explore Masterpoint Resources Ltd's portfolio of residential, commercial, structural and estate infrastructure projects delivered nationwide across Nigeria.",
+    "See the work of a building contractor who delivers. Browse Masterpoint Resources Ltd's portfolio of residential, commercial, structural, and estate infrastructure projects across Nigeria.",
 };
 
 export default function ProjectsPage() {
