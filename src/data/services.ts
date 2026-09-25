@@ -67,7 +67,7 @@ export const services: Service[] = [
   },
   {
     slug: "interior-finishing-tiling",
-    title: "Interior Finishing & Tiling",
+    title: "Exterior Finishing & Tiling",
     summary:
       "Premium finishing that turns a shell into a place people are proud to hand over.",
     points: [
