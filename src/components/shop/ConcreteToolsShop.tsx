@@ -12,6 +12,7 @@ type ToolItem = {
   unit: string;
   images?: string[];
   video?: { src: string; poster?: string };
+  requestPicture?: boolean;
 };
 
 const SECTIONS = [
@@ -47,8 +48,7 @@ const SECTIONS = [
         name: "Stain Plus",
         price: "₦4,700",
         unit: "per litre",
-        images: ["/images/tools/sealer-polish.jpg"],
-        video: { src: "/videos/tools/sealer-glossy.mp4", poster: "/images/tools/sealer-polish.jpg" },
+        requestPicture: true,
       },
     ] as ToolItem[],
   },
@@ -62,8 +62,8 @@ const SECTIONS = [
         name: "Big Edger",
         price: "₦25,000",
         unit: "each",
-        images: ["/images/tools/edgers.jpg"],
-        video: { src: "/videos/tools/edger-25k.mp4", poster: "/images/tools/edgers.jpg" },
+        video: { src: "/videos/tools/edger-25k.mp4" },
+        requestPicture: true,
       },
       {
         id: "medium-edger",
@@ -74,11 +74,11 @@ const SECTIONS = [
         video: { src: "/videos/tools/edger.mp4", poster: "/images/tools/edgers.jpg" },
       },
       {
-        id: "border-roller",
-        name: "Border Roller",
+        id: "rolling-mat",
+        name: "Decorative Rolling Mat",
         price: "₦18,000",
         unit: "each",
-        images: ["/images/tools/border-roller.jpg"],
+        images: ["/images/tools/border-roller.jpg", "/images/tools/border-roller-2.jpg"],
       },
       {
         id: "medium-groover",
@@ -93,14 +93,22 @@ const SECTIONS = [
         name: "Turkey Groover",
         price: "₦18,000",
         unit: "each",
-        video: { src: "/videos/tools/tool-40k.mp4" },
+        images: ["/images/tools/edgers.jpg"],
       },
       {
         id: "pool-trowel",
-        name: "Pool Trowel",
+        name: "Pool Trowel (SERFA 45cm)",
         price: "₦15,000",
         unit: "each",
         images: ["/images/tools/pool-trowel.jpg"],
+      },
+      {
+        id: "heavy-groover",
+        name: "Heavy-Duty Concrete Groover",
+        price: "₦40,000",
+        unit: "each",
+        video: { src: "/videos/tools/tool-40k.mp4" },
+        requestPicture: true,
       },
     ] as ToolItem[],
   },
@@ -116,8 +124,9 @@ const SECTIONS = [
       { id: "ashlar-stone", name: "Ashlar Stone", price: "₦275,000", unit: "pair of two", images: ["/images/tools/stamping-mat-2.jpg"] },
       { id: "vintage-mat", name: "Vintage Mat", price: "₦270,000", unit: "pair of two", images: ["/images/tools/stamping-mats.jpg"] },
       { id: "european-fan", name: "European Fan Mat", price: "₦280,000", unit: "pair of two", images: ["/images/tools/stamping-mats.jpg"] },
-      { id: "orient-dream", name: "Orient Dream Mat", price: "₦260,000", unit: "pair of two", images: ["/images/tools/stamping-mat-plank.jpg"] },
+      { id: "orient-dream", name: "Orient Dream Mat", price: "₦260,000", unit: "pair of two", images: ["/images/tools/stamping-mat-wood-stone.jpg"] },
       { id: "random-stone", name: "Random Stone Mat", price: "₦290,000", unit: "pair of two", images: ["/images/tools/stamping-mats.jpg"] },
+      { id: "diamond-herringbone", name: "Diamond Herringbone Mat", price: "₦280,000", unit: "pair of two", images: ["/images/tools/stamping-mat-diamond.jpg"] },
       { id: "compass-circle", name: "Compass Circle Mat", price: "₦280,000", unit: "a piece", images: ["/images/tools/center-mat-2.jpg"] },
       { id: "medallion-circle", name: "Medallion Circle Mat", price: "₦220,000", unit: "each", images: ["/images/tools/center-mat.jpg"] },
     ] as ToolItem[],
@@ -130,34 +139,36 @@ const ACCENT = {
     price: "text-brand-orange",
     btn: "bg-brand-orange hover:bg-brand-orange-dark text-white",
     wa: "text-brand-orange hover:opacity-75",
+    badge: "bg-brand-orange/10 text-brand-orange border-brand-orange/20",
   },
   blue: {
     tab: "bg-brand-blue text-white",
     price: "text-brand-blue",
     btn: "bg-brand-blue hover:bg-brand-blue-dark text-white",
     wa: "text-brand-blue hover:opacity-75",
+    badge: "bg-brand-blue/10 text-brand-blue border-brand-blue/20",
   },
   green: {
     tab: "bg-brand-green text-brand-dark",
     price: "text-brand-green-dark",
     btn: "bg-brand-green hover:opacity-90 text-brand-dark",
     wa: "text-brand-green-dark hover:opacity-75",
+    badge: "bg-brand-green/10 text-brand-green-dark border-brand-green/20",
   },
 };
 
-// Four border-radius variants that cycle through for an organic, uneven feel
 const SHAPES = [
+  "rounded-lg",
+  "rounded-tl-2xl rounded-br-2xl rounded-tr-md rounded-bl-md",
+  "rounded-tr-2xl rounded-bl-2xl rounded-tl-md rounded-br-md",
   "rounded-xl",
-  "rounded-tl-3xl rounded-br-3xl rounded-tr-lg rounded-bl-lg",
-  "rounded-tr-3xl rounded-bl-3xl rounded-tl-lg rounded-br-lg",
-  "rounded-2xl",
 ];
 
 const IMG_SHAPES = [
-  "rounded-xl",
-  "rounded-tl-3xl rounded-br-2xl rounded-tr-lg rounded-bl-lg",
-  "rounded-tr-3xl rounded-bl-2xl rounded-tl-lg rounded-br-lg",
-  "rounded-t-2xl",
+  "rounded-t-lg",
+  "rounded-tl-2xl rounded-br-lg rounded-tr-md",
+  "rounded-tr-2xl rounded-bl-lg rounded-tl-md",
+  "rounded-t-xl",
 ];
 
 function ToolCard({ item, accent, idx }: { item: ToolItem; accent: "orange" | "blue" | "green"; idx: number }) {
@@ -167,6 +178,7 @@ function ToolCard({ item, accent, idx }: { item: ToolItem; accent: "orange" | "b
   const imgShape = IMG_SHAPES[idx % 4];
   const styles = ACCENT[accent];
   const firstImage = item.images?.[0];
+  const hasMedia = item.video || firstImage;
 
   function handleAdd() {
     addItem({ id: `tool-${item.id}`, name: item.name, unit: item.unit }, 1);
@@ -175,7 +187,7 @@ function ToolCard({ item, accent, idx }: { item: ToolItem; accent: "orange" | "b
   }
 
   return (
-    <div className={`break-inside-avoid mb-3 overflow-hidden border border-black/10 bg-white shadow-sm ${cardShape}`}>
+    <div className={`break-inside-avoid mb-2 overflow-hidden border border-black/10 bg-white shadow-sm ${cardShape}`}>
       {item.video ? (
         <video
           src={item.video.src}
@@ -184,35 +196,52 @@ function ToolCard({ item, accent, idx }: { item: ToolItem; accent: "orange" | "b
           muted
           playsInline
           preload="none"
-          className={`w-full aspect-[4/3] object-cover bg-black/5 ${imgShape}`}
+          className={`w-full aspect-square object-cover bg-black/5 ${imgShape}`}
         />
       ) : firstImage ? (
-        <div className={`relative aspect-[4/3] overflow-hidden ${imgShape}`}>
+        <div className={`relative aspect-square overflow-hidden ${imgShape}`}>
           <Image
             src={firstImage}
             alt={item.name}
             fill
-            sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+            sizes="(min-width: 1280px) 20vw, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
             className="object-cover"
           />
         </div>
-      ) : (
-        <div className={`aspect-[4/3] flex items-center justify-center bg-gray-100 ${imgShape}`}>
-          <svg className="h-8 w-8 text-gray-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-          </svg>
-        </div>
-      )}
+      ) : null}
 
-      <div className="p-3">
-        <p className="text-[10px] font-bold uppercase tracking-wider text-black/35">{item.unit}</p>
-        <h3 className="mt-0.5 font-heading text-sm font-semibold leading-tight text-brand-dark">{item.name}</h3>
-        <p className={`mt-1 text-base font-bold ${styles.price}`}>{item.price}</p>
+      <div className="p-2">
+        <p className="text-[9px] font-bold uppercase tracking-wider text-black/30">{item.unit}</p>
+        <h3 className="mt-0.5 font-heading text-[11px] font-semibold leading-tight text-brand-dark">{item.name}</h3>
+        <p className={`mt-0.5 text-sm font-bold ${styles.price}`}>{item.price}</p>
+
+        {item.requestPicture && !hasMedia && (
+          <a
+            href={whatsappLink(
+              `Hello Masterpoint, please send a picture of: ${item.name} (${item.price} ${item.unit}).`
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`mt-1.5 inline-flex items-center gap-1 rounded border px-2 py-0.5 text-[10px] font-semibold ${styles.badge}`}
+          >
+            <svg className="h-2.5 w-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Request Picture
+          </a>
+        )}
+
+        {item.requestPicture && hasMedia && (
+          <p className={`mt-1 inline-flex items-center gap-1 rounded border px-1.5 py-0.5 text-[9px] font-semibold ${styles.badge}`}>
+            Request Picture
+          </p>
+        )}
 
         <button
           type="button"
           onClick={handleAdd}
-          className={`mt-3 w-full rounded-lg py-1.5 text-xs font-bold uppercase tracking-wide transition-colors ${
+          className={`mt-2 w-full rounded-md py-1 text-[10px] font-bold uppercase tracking-wide transition-colors ${
             added ? "bg-brand-green text-brand-dark" : styles.btn
           }`}
         >
@@ -224,7 +253,7 @@ function ToolCard({ item, accent, idx }: { item: ToolItem; accent: "orange" | "b
           )}
           target="_blank"
           rel="noopener noreferrer"
-          className={`mt-2 block text-center text-[11px] font-semibold transition-opacity ${styles.wa}`}
+          className={`mt-1.5 block text-center text-[10px] font-semibold transition-opacity ${styles.wa}`}
         >
           Enquire on WhatsApp →
         </a>
@@ -249,7 +278,7 @@ export default function ConcreteToolsShop() {
         </p>
       </div>
 
-      <div className="mb-8 flex flex-wrap gap-2">
+      <div className="mb-6 flex flex-wrap gap-2">
         {SECTIONS.map((s, i) => {
           const isActive = i === activeIdx;
           const tabStyle = ACCENT[s.accent].tab;
@@ -258,7 +287,7 @@ export default function ConcreteToolsShop() {
               key={s.id}
               type="button"
               onClick={() => setActiveIdx(i)}
-              className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wide transition-colors ${
+              className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wide transition-colors ${
                 isActive ? tabStyle : "border border-black/10 bg-white text-brand-dark/60 hover:border-black/25 hover:text-brand-dark"
               }`}
             >
@@ -268,7 +297,7 @@ export default function ConcreteToolsShop() {
         })}
       </div>
 
-      <div className="columns-2 gap-3 md:columns-3 lg:columns-4">
+      <div className="columns-2 gap-2 sm:columns-3 md:columns-4 lg:columns-5">
         {section.items.map((item, i) => (
           <ToolCard key={item.id} item={item} accent={section.accent} idx={i} />
         ))}
