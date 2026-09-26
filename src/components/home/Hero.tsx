@@ -4,22 +4,31 @@ import { useState } from "react";
 import Image from "next/image";
 import ShuffleBackdrop from "@/components/shared/ShuffleBackdrop";
 import StatCounter from "@/components/shared/StatCounter";
-import { heroSlides } from "@/data/hero";
+import { heroDesktopSlides, heroMobileSlides } from "@/data/hero";
 import { company } from "@/data/company";
 
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeSlide = heroSlides[activeIndex];
+  const activeSlide = heroDesktopSlides[activeIndex];
 
   return (
     <section>
-      {/* Phone gets a dedicated square (1:1) version of each banner - purpose
-          built by the client so nothing needs cropping there - while sm and up
-          use the native 1600x533 (3:1) canvas. Both are full pictures, never
-          cropped, at every breakpoint. */}
-      <div className="relative aspect-square w-full overflow-hidden sm:aspect-[3/1]">
+      {/* Mobile: portrait/square images only, hidden on sm and up */}
+      <div className="relative aspect-square w-full overflow-hidden sm:hidden">
         <ShuffleBackdrop
-          slides={heroSlides}
+          slides={heroMobileSlides}
+          intervalMs={6000}
+          preloadAll
+        />
+        <h1 className="sr-only">
+          Masterpoint Resources Ltd: Nigeria&apos;s Certified Building Contractor and Building Materials Supplier
+        </h1>
+      </div>
+
+      {/* Desktop: horizontal/wide images only, hidden below sm */}
+      <div className="relative hidden w-full overflow-hidden sm:block sm:aspect-[3/1]">
+        <ShuffleBackdrop
+          slides={heroDesktopSlides}
           intervalMs={6000}
           preloadAll
           onActiveChange={setActiveIndex}

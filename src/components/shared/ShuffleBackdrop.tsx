@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { reshuffle } from "@/lib/shuffle";
 
-type Slide = { image: string; mobileImage?: string; alt: string };
+type Slide = { image: string; mobileImage?: string; alt: string; objectPosition?: string };
 
 export default function ShuffleBackdrop({
   slides,
@@ -81,7 +81,7 @@ export default function ShuffleBackdrop({
             quality={90}
             sizes="100vw"
             className={`object-cover pointer-events-none select-none ${slide.mobileImage ? "hidden sm:block" : ""}`}
-            style={{ objectPosition }}
+            style={{ objectPosition: slide.objectPosition ?? objectPosition }}
             draggable={false}
           />
         </div>
