@@ -1,4 +1,4 @@
-// Horizontal (wide 3:1) images — PC/desktop carousel only
+// Horizontal (wide 3:1) images - PC/desktop carousel only
 export const heroDesktopSlides = [
   { image: "/images/hero/hero-01-foundation-desktop.jpg", alt: "From Foundation to Finishing. Certified, Every Stage." },
   { image: "/images/hero/hero-02-equipment-desktop.jpg", alt: "Quality Equipment. Safer Construction. Better Results." },
@@ -14,7 +14,7 @@ export const heroDesktopSlides = [
   { image: "/images/hero/hero-12-build-c-desktop.jpg", alt: "We Build It. You Move In. Simple." },
 ];
 
-// Portrait (square 1:1) images — mobile carousel only
+// Portrait (square 1:1) images - mobile carousel only
 // objectPosition "top" keeps the text (always at the top of these images) visible
 // when the portrait image is cropped to fit the square mobile container.
 export const heroMobileSlides = [

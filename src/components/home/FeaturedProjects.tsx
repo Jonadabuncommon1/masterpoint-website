@@ -56,7 +56,7 @@ export default function FeaturedProjects() {
           <SectionHeading
             eyebrow="Our Work"
             title="Buildings We Have Delivered Across Nigeria"
-            description="Residential builds, commercial projects, structural work and finishing contracts. Don&apos;t take our word for it — see the buildings."
+            description="Residential builds, commercial projects, structural work and finishing contracts. Don&apos;t take our word for it. See the buildings."
           />
           <Link
             href="/projects"

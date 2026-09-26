@@ -274,7 +274,7 @@ export default function ConcreteToolsShop() {
           Stamped Concrete Materials &amp; Tools
         </h2>
         <p className="mt-3 max-w-xl text-sm text-brand-dark/60">
-          Professional-grade finishing materials, hand tools and stamping mats for decorative concrete work. Direct-supply pricing — no middlemen.
+          Professional-grade finishing materials, hand tools and stamping mats for decorative concrete work. Direct-supply pricing. No middlemen.
         </p>
       </div>
 
