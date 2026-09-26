@@ -13,8 +13,8 @@ export default function MaterialsPreview() {
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Building Materials Supply"
-            title="Direct-Source Materials, Delivered Nationwide"
-            description="Cement, steel, blocks, roofing, tiles and more, in stock and ready to go. Order online or request a quote and we deliver straight to your site."
+            title="Direct from Source to Your Site. No Mark-Ups."
+            description="Cement, steel, blocks, roofing sheets, tiles and more, in stock and ready for dispatch. Order online, or send us a quote request directly on WhatsApp."
           />
           <Link
             href="/materials"

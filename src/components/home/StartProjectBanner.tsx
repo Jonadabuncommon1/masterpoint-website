@@ -7,10 +7,10 @@ export default function StartProjectBanner() {
       <Container className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
           <p className="font-heading text-lg font-bold uppercase tracking-wide text-white sm:text-xl">
-            Thinking of Starting Your Own Construction Project?
+            Planning a Build? Here&apos;s What Every Client Should Know.
           </p>
           <p className="mt-1 text-sm text-white/70">
-            See the materials, tools and structural know-how behind every type of construction work.
+            Every stage, every material and every structural requirement explained. Your complete contractor&apos;s guide.
           </p>
         </div>
         <Link

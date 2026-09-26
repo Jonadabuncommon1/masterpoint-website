@@ -19,11 +19,12 @@ export default function CTABanner() {
       <Container className="relative flex flex-col items-center gap-8 text-center lg:flex-row lg:justify-between lg:text-left">
         <div className="max-w-xl">
           <h2 className="text-balance font-engineering text-3xl font-bold uppercase tracking-wide text-white sm:text-4xl">
-            Don&apos;t Let Poor Materials Ruin Your Build
+            Don&apos;t Hand Your Build to the Wrong Contractor
           </h2>
           <p className="mt-4 text-white/80">
-            Every day you wait is a day closer to a rushed decision. Speak to our team today for a
-            free consultation, or request a quote on materials for your site. {company.slogan}
+            The wrong contractor costs money, time and peace of mind. Speak to our certified team
+            today for a free consultation, or request a direct quote on building materials for your
+            site.
           </p>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row">

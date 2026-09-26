@@ -28,11 +28,11 @@ export default function CalculatorsTeaser() {
               Free Interactive Tools
             </span>
             <h2 className="mt-3 text-balance font-heading text-3xl font-bold uppercase text-white antialiased sm:text-4xl">
-              Plan Your Build With Confidence
+              Know Your Numbers Before You Hire a Contractor
             </h2>
             <p className="mt-4 max-w-xl font-medium text-white antialiased">
-              Stop guessing and start planning. Two free tools to help you budget accurately
-              before you spend a single naira.
+              Two free tools to help you budget accurately and understand your build costs before
+              you spend a single naira.
             </p>
 
             <div className="mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">

@@ -7,27 +7,27 @@ import { company } from "@/data/company";
 import { safetyStandards } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "About Us | 12 Years of Building Nigeria",
+  title: "About Us | Nigeria's Certified Building Contractor",
   description:
-    "Masterpoint Resources Ltd is a building contractor with 12 years of certified construction experience across Nigeria. From Enugu to Lagos, we build structures that last. Meet the people behind the work.",
+    "Masterpoint Resources Ltd is a certified building contractor and building materials supplier with 12 years of experience across Nigeria. From Enugu to Lagos, we build and supply. Meet the team behind the work.",
 };
 
 const DIFFERENTIATORS = [
   {
-    title: "Direct-Source Materials",
-    body: "We source cement, steel and finishing materials directly, cutting out unnecessary mark-ups and passing the benefit on to your project.",
+    title: "Direct-Source Building Materials",
+    body: "We source cement, steel and finishing materials direct, cutting out unnecessary mark-ups and passing the saving to your project.",
   },
   {
-    title: "Rigorous Quality Inspections",
-    body: "Every stage of a build is inspected before the next begins, from foundation to final finishing.",
+    title: "Rigorous Stage Inspections",
+    body: "Every stage of the build is inspected before the next begins, from foundation through to final finishing.",
   },
   {
-    title: "Elite Craftsmanship",
-    body: "Trained, skilled personnel and certified site supervisors are assigned to every project we undertake.",
+    title: "Skilled, Certified Workforce",
+    body: "Trained personnel and certified site supervisors are assigned to every building contract we take on.",
   },
   {
     title: "On Time, On Budget",
-    body: "We deliver your projects on time and within budget, guaranteed.",
+    body: "We deliver your building project on time and within budget. That is the contractor's guarantee.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <Container className="relative">
           <span className="text-sm font-bold uppercase tracking-widest text-brand-orange">About Us</span>
           <h1 className="mt-4 max-w-3xl text-balance font-heading text-4xl font-bold uppercase text-white sm:text-5xl">
-            {company.yearsExperience} Years of Unyielding Structural Integrity
+            {company.yearsExperience} Years as Nigeria&apos;s Trusted Building Contractor
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">{company.slogan}</p>
         </Container>
@@ -50,19 +50,19 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Our Story"
-              title="Structural Excellence, Nationwide"
-              description={`${company.legalName} has spent over a decade building structural excellence into every landmark project we touch. Our senior management team brings ${company.yearsExperience} years of combined experience to residential, commercial and industrial construction, alongside a full building materials supply operation.`}
+              title="Building Contractor and Materials Supplier, Nationwide"
+              description={`${company.legalName} has spent over a decade taking on building contracts and supplying construction materials across Nigeria. Our senior management brings ${company.yearsExperience} years of certified experience to residential, commercial and industrial projects, alongside a full direct-source materials supply operation.`}
             />
             <p className="mt-5 text-brand-dark/70 leading-relaxed">
               Our clients range from homeowners building their first family home to property
-              developers, structural engineers and corporate estate firms delivering landmark
-              developments. Whatever the scale, our promise is the same: uncompromising quality and
-              precision building solutions.
+              developers and corporate estate firms. Whether your project is a two-bedroom bungalow
+              or a commercial plaza, our promise is the same: a certified building contractor who
+              delivers on time, on budget and to specification.
             </p>
             <p className="mt-5 text-brand-dark/70 leading-relaxed">
-              We are fully certified and compliant with national engineering standards, backed by
-              rigorous safety protocols and certified site supervisors, to guarantee zero-compromise
-              execution on every site.
+              We are fully certified and compliant with national engineering standards. Every building
+              contract we take on is backed by rigorous safety protocols, certified site supervisors
+              and zero-compromise quality inspection from mobilisation to handover.
             </p>
           </div>
           <RotatingHardHat />
@@ -86,7 +86,7 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             eyebrow="What Sets Us Apart"
-            title="What Makes Masterpoint Different"
+            title="What Makes Masterpoint the Right Contractor for Your Project"
             align="center"
           />
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -105,8 +105,8 @@ export default function AboutPage() {
           <div>
             <SectionHeading
               eyebrow="Certification &amp; Safety"
-              title="Compliant, Certified, Safe"
-              description="We hold national engineering compliance and follow strict safety protocols on every site we operate."
+              title="Certified, Compliant and Site-Safe"
+              description="We hold national engineering compliance and enforce strict safety protocols on every building contract we take on."
             />
             <ul className="mt-6 space-y-3">
               {safetyStandards.map((item) => (
@@ -143,9 +143,9 @@ export default function AboutPage() {
         <Container className="max-w-3xl text-center">
           <SectionHeading
             eyebrow="Leadership &amp; Site Supervision"
-            title="Engineering Leadership You Can Trust"
+            title="Engineering Leadership on Every Build"
             align="center"
-            description="Every Masterpoint project is led by certified site supervisors and an engineering leadership team with over a decade of hands-on experience, enforcing safety protocols and quality checks at every stage, from mobilisation to handover."
+            description="Every Masterpoint building contract is led by certified site supervisors and an engineering team with over a decade of hands-on experience, enforcing quality checks and safety at every stage from mobilisation to handover."
           />
         </Container>
       </section>

@@ -25,7 +25,7 @@ export default function Hero() {
           onActiveChange={setActiveIndex}
         />
         <h1 className="sr-only">
-          Masterpoint Resources Ltd: Structural Excellence for Your Next Landmark Project
+          Masterpoint Resources Ltd: Nigeria&apos;s Certified Building Contractor and Building Materials Supplier
         </h1>
       </div>
 

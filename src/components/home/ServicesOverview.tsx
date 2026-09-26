@@ -12,9 +12,9 @@ export default function ServicesOverview() {
       <Container>
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
-            eyebrow="What We Do"
-            title="Construction Services, End to End"
-            description="One team, one contract, zero chasing. From architectural design through to final finishing, our trained and certified crews handle every stage of your build."
+            eyebrow="What We Build"
+            title="Building Contractor Services, First Block to Final Finish"
+            description="One contractor, one contract. Our certified crews handle every stage of your build so you are never left coordinating multiple teams on your own."
           />
           <Link
             href="/services"

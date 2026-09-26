@@ -4,38 +4,38 @@ import Container from "@/components/shared/Container";
 
 const REASONS = [
   {
-    title: `${12} Years of Structural Integrity`,
-    body: "Over a decade of combined experience delivering builds that hold up to scrutiny and time.",
+    title: `${12} Years as a Certified Building Contractor`,
+    body: "Over a decade contracting residential, commercial and industrial builds across Nigeria. Certified, inspected and guaranteed from ground up.",
     icon: "M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z",
     image: "/images/hero/card-integrity-1.jpg",
   },
   {
-    title: "Direct-Source Materials",
-    body: "Cement, steel and finishing materials sourced directly, cutting out middleman mark-ups.",
+    title: "Direct-Source Building Materials",
+    body: "We supply cement, steel and finishing materials direct from source, cutting out mark-ups and keeping your project on budget.",
     icon: "M4 7h16M4 12h16M4 17h10",
     image: "/images/hero/card-integrity-2.jpg",
   },
   {
     title: "Certified Site Supervision",
-    body: "Every site runs under certified supervisors, national engineering standards and enforced PPE.",
+    body: "Every build runs under certified supervisors, enforcing national engineering standards and PPE requirements at every stage.",
     icon: "M9 12l2 2 4-4M7.5 3h9L21 7.5v9L16.5 21h-9L3 16.5v-9L7.5 3Z",
     image: "/images/hero/card-integrity-3.jpg",
   },
   {
-    title: "On-Time, On-Budget",
-    body: "Rigorous quality inspections and elite craftsmanship, delivered to programme and to budget.",
+    title: "On Time, On Budget",
+    body: "We deliver your build to programme and to budget. That is the contractor's commitment, not just a slogan.",
     icon: "M12 8v4l3 3M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z",
     image: "/images/hero/card-integrity-4.jpg",
   },
   {
-    title: "2–5 Year Structural Guarantee",
-    body: "A structural warranty on completed work, scaled to the condition and scope of your project.",
+    title: "2 to 5 Year Structural Guarantee",
+    body: "A written structural warranty on completed work, scaled to your project's scope and condition. That is how confident we are.",
     icon: "M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4Z",
     image: "/images/hero/card-integrity-5.jpg",
   },
   {
-    title: "Nationwide Reach",
-    body: "Projects delivered across Lagos, Enugu, Abuja, Rivers, Ogun, Anambra and beyond.",
+    title: "Nationwide Building Contractor",
+    body: "We take on building contracts across Lagos, Enugu, Abuja, Rivers, Ogun, Anambra and beyond. Wherever your site is.",
     icon: "M3 12h18M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9Z",
     image: "/images/hero/card-integrity-6.jpg",
   },
@@ -46,8 +46,8 @@ export default function WhyChooseUs() {
     <section className="bg-white py-20 sm:py-24">
       <Container>
         <SectionHeading
-          title="Built on Unyielding Structural Integrity"
-          description="We combine direct-source building materials, rigorous quality inspections and elite craftsmanship to deliver your projects on time and within budget, guaranteed."
+          title="One Contractor. Certified. Nationwide."
+          description="From foundation to final finishing, we are the building contractor and direct-source materials supplier that handles your entire build. No juggling multiple teams. No nasty surprises."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

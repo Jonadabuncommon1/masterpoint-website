@@ -55,8 +55,8 @@ export default function FeaturedProjects() {
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Our Work"
-            title="Projects Delivered Nationwide"
-            description="Don't just take our word for it. See the structural, finishing and estate infrastructure work speaking for itself across Nigeria."
+            title="Buildings We Have Delivered Across Nigeria"
+            description="Residential builds, commercial projects, structural work and finishing contracts. Don&apos;t take our word for it — see the buildings."
           />
           <Link
             href="/projects"
