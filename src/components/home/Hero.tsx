@@ -1,15 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ShuffleBackdrop from "@/components/shared/ShuffleBackdrop";
 import StatCounter from "@/components/shared/StatCounter";
 import { heroDesktopSlides, heroMobileSlides } from "@/data/hero";
 import { company } from "@/data/company";
 
+const STAT_COLORS = ["#ff6b00", "#00a8ff", "#00e676"];
+
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [colorTick, setColorTick] = useState(0);
   const activeSlide = heroDesktopSlides[activeIndex];
+
+  useEffect(() => {
+    const id = setInterval(() => setColorTick((t) => t + 1), 1000);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <section>
@@ -53,9 +61,12 @@ export default function Hero() {
           />
         </div>
         <div className="relative mx-auto grid max-w-7xl grid-cols-2 gap-3 px-4 py-4 sm:gap-6 sm:px-6 sm:py-10 lg:grid-cols-4 lg:px-8">
-          {company.stats.map((stat) => (
+          {company.stats.map((stat, i) => (
             <div key={stat.label} className="text-center lg:border-l lg:border-white/10 lg:first:border-l-0">
-              <p className="font-heading text-lg font-bold text-brand-orange sm:text-4xl">
+              <p
+                className="font-heading text-lg font-bold sm:text-4xl"
+                style={{ color: STAT_COLORS[(i + colorTick) % STAT_COLORS.length], transition: "color 0.4s ease" }}
+              >
                 <StatCounter key={`${stat.label}-${activeIndex}`} value={stat.value} suffix={stat.suffix} />
               </p>
               <p className="mt-0.5 text-[9px] font-medium uppercase tracking-wide text-white/70 sm:text-sm">

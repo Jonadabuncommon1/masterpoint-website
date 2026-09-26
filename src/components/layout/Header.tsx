@@ -47,11 +47,11 @@ export default function Header() {
           <Image
             src="/images/logo/masterpoint-logo-nav.png"
             alt="Masterpoint Resources Ltd"
-            width={220}
-            height={36}
+            width={180}
+            height={30}
             priority
             style={{ width: "auto" }}
-            className="h-8 sm:h-9"
+            className="h-6 sm:h-7"
           />
         </Link>
 
