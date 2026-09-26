@@ -40,7 +40,7 @@ export default function Footer() {
             width={220}
             height={36}
             style={{ width: "auto", filter: "drop-shadow(0 0 1px rgba(255,255,255,0.6))" }}
-            className="h-8 sm:h-9"
+            className="h-14 sm:h-16"
           />
           <p className="mt-5 text-sm leading-relaxed text-white/60">{company.slogan}</p>
           <div className="mt-6 flex gap-3">
