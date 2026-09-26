@@ -34,14 +34,16 @@ export default function Footer() {
       />
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
-          <Image
-            src="/images/logo/masterpoint-logo-nav.png"
-            alt="Masterpoint Resources Ltd"
-            width={245}
-            height={40}
-            style={{ width: "auto" }}
-            className="h-10"
-          />
+          <div className="inline-block rounded-md bg-white px-3 py-2">
+            <Image
+              src="/images/logo/masterpoint-logo-nav.png"
+              alt="Masterpoint Resources Ltd"
+              width={200}
+              height={34}
+              style={{ width: "auto" }}
+              className="h-8"
+            />
+          </div>
           <p className="mt-5 text-sm leading-relaxed text-white/60">{company.slogan}</p>
           <div className="mt-6 flex gap-3">
             {SOCIALS.map((s) => (

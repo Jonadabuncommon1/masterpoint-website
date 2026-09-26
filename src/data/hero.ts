@@ -13,6 +13,8 @@ export const heroDesktopSlides = [
   { image: "/images/hero/hero-11-desktop.jpg", alt: "We Build It. You Move In. Simple." },
 ];
 
+// (hero-12-desktop.jpg deleted — Enhanced set has 11 desktop banners)
+
 // Portrait/square images - mobile carousel only
 // Square images (1:1) fill the aspect-square container exactly - no cropping, all text visible.
 // Portrait image (hero-05) has text at the top - objectPosition "top" keeps it in frame.
