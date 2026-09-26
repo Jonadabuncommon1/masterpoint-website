@@ -34,7 +34,15 @@ export default function Footer() {
       />
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
-          <p className="text-sm leading-relaxed text-white/60">{company.slogan}</p>
+          <Image
+            src="/images/logo/masterpoint-logo-footer.png"
+            alt="Masterpoint Resources Ltd"
+            width={220}
+            height={36}
+            style={{ width: "auto", filter: "drop-shadow(0 0 1px rgba(255,255,255,0.6))" }}
+            className="h-8 sm:h-9"
+          />
+          <p className="mt-5 text-sm leading-relaxed text-white/60">{company.slogan}</p>
           <div className="mt-6 flex gap-3">
             {SOCIALS.map((s) => (
               <a
@@ -145,17 +153,9 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-white/10 py-6">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <Image
-            src="/images/logo/masterpoint-logo-footer.png"
-            alt="Masterpoint Resources Ltd"
-            width={220}
-            height={36}
-            style={{ width: "auto", filter: "drop-shadow(0 0 1px rgba(255,255,255,0.6))" }}
-            className="h-8 sm:h-9"
-          />
-          <p className="text-xs text-white/50">© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
-          <p className="text-xs text-white/50">Built for nationwide construction &amp; building materials supply.</p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 text-xs text-white/50 sm:flex-row sm:px-6 lg:px-8">
+          <p>© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
+          <p>Built for nationwide construction &amp; building materials supply.</p>
         </div>
       </div>
     </footer>
