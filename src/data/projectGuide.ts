@@ -12,60 +12,6 @@ export type GuideCategory = {
 
 export const guideCategories: GuideCategory[] = [
   {
-    slug: "concrete-finishing-materials",
-    tabLabel: "Concrete Finishing Materials",
-    accent: "orange",
-    headline: "Master the Art of Decorative Concrete Finishing",
-    intro:
-      "Colour, texture and a lasting seal are what turn a plain slab into decorative stamped concrete. Here's what it costs to stock the finishing materials.",
-    entryStyle: "price",
-    entries: [
-      { name: "Colour Hardener", detail: "₦26,500 per 25kg bag" },
-      { name: "Antique Release Agent", detail: "₦56,500 per bag" },
-      { name: "Sealer Polish", detail: "₦5,800 per litre" },
-      { name: "Stain Plus", detail: "₦4,700 per litre" },
-    ],
-  },
-  {
-    slug: "tools-and-equipment",
-    tabLabel: "Tools & Equipment",
-    accent: "blue",
-    headline: "Get the Right Tools for Professional Stamped Concrete Work",
-    intro:
-      "Clean edges, crisp grooves and a smooth finish all come down to having the right hand tools on site.",
-    entryStyle: "price",
-    entries: [
-      { name: "Big Edger", detail: "₦25,000 each" },
-      { name: "Medium Edger", detail: "₦15,000 each" },
-      { name: "Border Roller", detail: "₦18,000 each" },
-      { name: "Medium Groover", detail: "₦15,000 each" },
-      { name: "Turkey Groover", detail: "₦18,000 each" },
-      { name: "Pool Trowel", detail: "₦15,000 each" },
-    ],
-  },
-  {
-    slug: "stamping-mats-circles",
-    tabLabel: "Stamping Mats & Circles",
-    accent: "green",
-    headline: "Bring Texture and Pattern to Every Pour",
-    intro:
-      "Stamping mats and circles are what press a pattern, such as stone, plank or medallion, into wet concrete before it cures.",
-    entryStyle: "price",
-    entries: [
-      { name: "Wooden Frame Mat", detail: "₦280,000 (pair of two pieces)" },
-      { name: "Versace Circle", detail: "₦310,000 each" },
-      { name: "Wooden Plank", detail: "₦230,000 (pair of two pieces)" },
-      { name: "Large Ashlar", detail: "₦310,000 (pair of two pieces)" },
-      { name: "Ashlar Stone", detail: "₦275,000 (pair of two pieces)" },
-      { name: "Vintage Mat", detail: "₦270,000 (pair of two pieces)" },
-      { name: "European Fan Mat", detail: "₦280,000 (pair of two pieces)" },
-      { name: "Orient Dream Mat", detail: "₦260,000 (pair of two pieces)" },
-      { name: "Random Stone Mat", detail: "₦290,000 (pair of two pieces)" },
-      { name: "Compass Circle Mat", detail: "₦280,000 a piece" },
-      { name: "Medallion Circle Mat", detail: "₦220,000" },
-    ],
-  },
-  {
     slug: "structural-stages",
     tabLabel: "Structural Stages",
     accent: "orange",

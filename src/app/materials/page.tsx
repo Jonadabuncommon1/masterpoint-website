@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/shared/Container";
 import MaterialsCatalogue from "@/components/shop/MaterialsCatalogue";
+import ConcreteToolsShop from "@/components/shop/ConcreteToolsShop";
 import { deliveryTerms, materialsNote } from "@/data/materials";
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default function MaterialsPage() {
         <Container>
           <MaterialsCatalogue />
           <p className="mt-10 text-center text-sm text-brand-dark/50">{materialsNote}</p>
+          <ConcreteToolsShop />
         </Container>
       </section>
 

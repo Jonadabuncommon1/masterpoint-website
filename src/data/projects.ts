@@ -134,7 +134,22 @@ export const projects: Project[] = [
     title: "Exterior Finishing & Tiling",
     location: "Nationwide",
     category: "Finishing",
-    images: [img("tiling-finishing-01"), img("tiling-finishing-02")],
+    images: [
+      img("tiling-finishing-01"),
+      img("tiling-finishing-02"),
+      img("exterior-floors-1"),
+      img("exterior-floors-2"),
+      img("exterior-floors-3"),
+      img("exterior-floors-4"),
+      img("exterior-floors-5"),
+    ],
+    videos: [
+      vid("exterior-floors-1"),
+      vid("exterior-floors-2"),
+      vid("exterior-floors-3"),
+      vid("exterior-floors-4"),
+      vid("exterior-floors-5"),
+    ],
   },
   {
     slug: "roofing-decking",

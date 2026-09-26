@@ -6,7 +6,7 @@ export const company = {
   yearsExperience: 12,
   email: "masterpointresourcsltd@gmail.com",
   phones: [
-    { display: "0803 377 8408", tel: "+2348033778408", whatsapp: "2348033778408" },
+    { display: "0705 338 1665", tel: "+2347053381665", whatsapp: "2347053381665" },
     { display: "0808 822 9011", tel: "+2348088229011", whatsapp: "2348088229011" },
     { display: "0806 958 9816", tel: "+2348069589816", whatsapp: "2348069589816" },
   ],
